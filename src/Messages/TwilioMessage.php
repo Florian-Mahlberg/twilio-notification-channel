@@ -2,7 +2,7 @@
 
 namespace Illuminate\Notifications\Messages;
 
-class VonageMessage
+class TwilioMessage
 {
     /**
      * The message content.
@@ -28,7 +28,7 @@ class VonageMessage
     /**
      * The custom Vonage client instance.
      *
-     * @var \Vonage\Client|null
+     * @var \Twilio\Rest\Client|null
      */
     public $client;
 
@@ -124,7 +124,7 @@ class VonageMessage
     /**
      * Set the Vonage client instance.
      *
-     * @param  \Vonage\Client  $clientReference
+     * @param  \Twilio\Rest\Client  $clientReference
      * @return $this
      */
     public function usingClient($client)

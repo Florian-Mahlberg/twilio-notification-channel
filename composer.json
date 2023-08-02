@@ -1,7 +1,7 @@
 {
-    "name": "laravel/vonage-notification-channel",
-    "description": "Vonage Notification Channel for laravel.",
-    "keywords": ["laravel", "notifications", "vonage", "nexmo"],
+    "name": "florian-mahlberg/twilio-notification-channel",
+    "description": "Twilio Notification Channel for laravel.",
+    "keywords": ["laravel", "notifications", "twilio"],
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +13,7 @@
         "php": "^8.0",
         "illuminate/notifications": "^8.0|^9.0|^10.0",
         "illuminate/support": "^8.0|^9.0|^10.0",
-        "vonage/client-core": "^4.0.4"
+        "twilio/sdk": "*"
     },
     "require-dev": {
         "guzzlehttp/guzzle": "^7.2",
@@ -44,10 +44,10 @@
         },
         "laravel": {
             "providers": [
-                "Illuminate\\Notifications\\VonageChannelServiceProvider"
+                "Illuminate\\Notifications\\TwilioChannelServiceProvider"
             ],
             "aliases": {
-                "Vonage": "Illuminate\\Notifications\\Facades\\Vonage"
+                "Twilio": "Illuminate\\Notifications\\Facades\\Twilio"
             }
         }
     },
