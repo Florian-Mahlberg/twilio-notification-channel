@@ -20,7 +20,7 @@ class TwilioChannelServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/twilio.php', 'twilio');
 
         $this->app->singleton(Client::class, function ($app) {
-            return Twilio::make()->client();
+            return Twilio::make($app['config']['twilio'])->client();
         });
 
         $this->app->bind(TwilioSmsChannel::class, function ($app) {

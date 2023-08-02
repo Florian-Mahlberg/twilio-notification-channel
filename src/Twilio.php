@@ -64,7 +64,7 @@ class Twilio
 
         if (!$basicCredentials) {
             $combinations = [
-                'api_key + api_secret',
+                'api_sid + api_token',
             ];
 
             throw new RuntimeException(
