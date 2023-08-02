@@ -2,7 +2,7 @@
 
 namespace Illuminate\Notifications\Tests\Feature;
 
-use Illuminate\Notifications\VonageChannelServiceProvider;
+use Illuminate\Notifications\TwilioChannelServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 abstract class FeatureTestCase extends TestCase
@@ -15,6 +15,6 @@ abstract class FeatureTestCase extends TestCase
      */
     protected function getPackageProviders($app)
     {
-        return [VonageChannelServiceProvider::class];
+        return [TwilioChannelServiceProvider::class];
     }
 }

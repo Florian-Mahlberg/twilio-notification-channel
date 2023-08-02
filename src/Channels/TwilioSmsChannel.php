@@ -55,8 +55,6 @@ class TwilioSmsChannel
             $message = new TwilioMessage($message);
         }
 
-        \Illuminate\Support\Facades\Log::info("Msg type: ".$message->type);
-
         $twilioSms = $this->client->messages->create(
             $to,
             [
