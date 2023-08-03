@@ -30,7 +30,7 @@ class TwilioChannelServiceProvider extends ServiceProvider
         });
 
         Notification::resolved(function (ChannelManager $service) {
-            $service->extend('whatsapp', function ($app) {
+            $service->extend('twilio', function ($app) {
                 return $app->make(TwilioWhatsappChannel::class);
             });
         });
@@ -46,7 +46,7 @@ class TwilioChannelServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/twilio.php' => $this->app->configPath('twilio.php'),
-            ], 'whatsapp');
+            ], 'twilio');
         }
     }
 }
