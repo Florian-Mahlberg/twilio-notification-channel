@@ -5,6 +5,7 @@ namespace Illuminate\Notifications;
 use Illuminate\Notifications\Channels\TwilioSmsChannel;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\ServiceProvider;
+use RuntimeException;
 use Vonage\Client;
 
 class TwilioChannelServiceProvider extends ServiceProvider
